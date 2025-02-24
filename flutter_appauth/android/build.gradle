@@ -6,7 +6,6 @@ buildscript {
         google()
         mavenCentral()
     }
-
     dependencies {
         classpath 'com.android.tools.build:gradle:8.0.1'
     }
@@ -23,11 +22,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 33
-
-    if (project.android.hasProperty("namespace")) {
-        namespace 'io.crossingthestreams.flutterappauth'
-    }
-
+    namespace 'io.crossingthestreams.flutterappauth'  // ここを必ず指定
 
     defaultConfig {
         minSdkVersion 16
